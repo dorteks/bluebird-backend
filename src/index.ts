@@ -19,7 +19,10 @@ app.use(user, post);
 
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "http://localhost:3010",
+      "https://bluebird-backend-service.onrender.com",
+    ],
   })
 );
 
