@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "engines": {
-    "node": "14.17.0"
+    "node": ">=14"
   },
   "scripts": {
     "start": "ts-node src/index.ts",
