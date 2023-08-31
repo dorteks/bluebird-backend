@@ -10,11 +10,12 @@ import { authenticate, verifyToken } from "./middleware/auth/jwtAuth";
 
 const app = express();
 
-app.use(cors);
 app.use(express.json());
 app.use(cookieParser("", {}));
 
 app.use(user, post);
+
+app.use(cors);
 
 app.get("/server-check", async (req, res) => {
   res.send("🚀 Typescript Node Express server");
