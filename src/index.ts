@@ -15,7 +15,13 @@ app.use(cookieParser("", {}));
 
 app.use(user, post);
 
-app.use(cors);
+// app.use(cors);
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.get("/server-check", async (req, res) => {
   res.send("🚀 Typescript Node Express server");
